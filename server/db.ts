@@ -1,7 +1,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { fileURLToPath } from 'node:url';
 import { MongoClient, Db } from 'mongodb';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export interface Coordinates {
   lat: number;
@@ -1401,7 +1405,7 @@ class DatabaseService {
   };
 
   constructor() {
-    const dataDir = path.resolve(process.cwd(), 'data');
+    const dataDir = path.resolve(__dirname, 'data');
     if (!fs.existsSync(dataDir)) {
       fs.mkdirSync(dataDir, { recursive: true });
     }
