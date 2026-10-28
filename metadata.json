@@ -1,6 +1,0 @@
-{
-  "name": "AURA Estates | Luxury Real Estate & Property Marketplace",
-  "description": "An online luxury real estate and property marketplace. Explore premier residential properties, schedule private viewings, calculate mortgages, and list properties.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
